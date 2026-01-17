@@ -1,9 +1,19 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Shield, CreditCard } from "lucide-react";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import heroDashboard from "@/assets/dashboard.png";
 
 const Hero = () => {
+  const [isImageOpen, setIsImageOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 overflow-hidden">
       {/* Background Effects */}
@@ -95,7 +105,10 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-12 sm:mt-16 max-w-3xl mx-auto px-4"
         >
-          <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-card glass p-1 sm:p-2">
+          <div 
+            className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-card glass p-1 sm:p-2 cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => setIsImageOpen(true)}
+          >
             <div className="rounded-lg sm:rounded-xl overflow-hidden">
               <img 
                 src={heroDashboard} 
@@ -109,6 +122,24 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+
+      <Dialog open={isImageOpen} onOpenChange={setIsImageOpen}>
+        <DialogContent className="max-w-7xl w-[95vw] max-h-[90vh]">
+          <DialogHeader>
+            <DialogTitle>PrecifyApp Dashboard</DialogTitle>
+            <DialogDescription>
+              Visão geral do sistema - Clique fora da imagem para fechar
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 overflow-auto max-h-[75vh]">
+            <img 
+              src={heroDashboard} 
+              alt="PrecifyApp Dashboard - Mentor IA para precificação"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

@@ -13,6 +13,7 @@ const plans = [
     tokens: "100 mil tokens/mês",
     popular: false,
     featured: false,
+    link: "https://pay.kiwify.com.br/1L40DjT",
   },
   {
     name: "Semestral",
@@ -23,6 +24,7 @@ const plans = [
     tokens: "250 mil tokens/mês",
     popular: true,
     featured: true,
+    link: "https://pay.kiwify.com.br/Bc0Zcf0",
   },
   {
     name: "Anual",
@@ -33,6 +35,7 @@ const plans = [
     tokens: "500 mil tokens/mês",
     popular: false,
     featured: false,
+    link: "https://pay.kiwify.com.br/29MCENF",
   },
 ];
 
@@ -211,7 +214,7 @@ const Pricing = () => {
                 )}
                 style={!plan.featured ? {boxShadow: 'var(--shadow-cta)'} : {}}
               >
-                <a href="http://painel.precifyapp.com">Assinar</a>
+                <a href={plan.link}>Assinar</a>
               </Button>
             </motion.div>
           ))}
