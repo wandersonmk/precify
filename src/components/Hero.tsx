@@ -5,7 +5,7 @@ import heroDashboard from "@/assets/dashboard.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] opacity-50" />
@@ -17,11 +17,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glass mb-6 sm:mb-8"
           >
-            <Zap className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">
-              Mentor IA para precificação inteligente
+            <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+            <span className="text-xs sm:text-sm font-medium text-foreground">
+              Gestão financeira com IA
             </span>
           </motion.div>
 
@@ -30,9 +30,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6 px-2"
           >
-            Precifique com
+            Calcule custos e tire dúvidas com
             <span className="text-gradient block mt-2">inteligência artificial</span>
           </motion.h1>
 
@@ -41,10 +41,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+            className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 px-2"
           >
-            Seu mentor de precificação pessoal. Analise custos, defina margens e 
-            encontre o preço ideal para seus produtos e serviços.
+            Gerencie entradas e saídas do seu negócio. Calcule o preço ideal dos seus produtos com nosso mentor IA.
           </motion.p>
 
           {/* CTAs */}
@@ -54,13 +53,13 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
           >
-            <Button size="lg" asChild className="w-full sm:w-auto text-base px-8 bg-cta hover:bg-cta/90 text-cta-foreground" style={{boxShadow: 'var(--shadow-cta)'}}>
+            <Button size="lg" asChild className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 bg-cta hover:bg-cta/90 text-cta-foreground" style={{boxShadow: 'var(--shadow-cta)'}}>
               <a href="http://painel.precifyapp.com">
                 Testar grátis por 7 dias
                 <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto text-base px-8">
+            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8">
               <a href="http://painel.precifyapp.com">
                 Acessar painel
               </a>
@@ -94,10 +93,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-16 max-w-3xl mx-auto"
+          className="mt-12 sm:mt-16 max-w-3xl mx-auto px-4"
         >
-          <div className="relative rounded-2xl overflow-hidden shadow-card glass p-2">
-            <div className="rounded-xl overflow-hidden">
+          <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-card glass p-1 sm:p-2">
+            <div className="rounded-lg sm:rounded-xl overflow-hidden">
               <img 
                 src={heroDashboard} 
                 alt="PrecifyApp Dashboard - Mentor IA para precificação" 
@@ -106,7 +105,7 @@ const Hero = () => {
               />
             </div>
             {/* Glow effect */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-primary/20 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-t from-primary/20 via-transparent to-transparent pointer-events-none" />
           </div>
         </motion.div>
       </div>

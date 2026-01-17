@@ -19,37 +19,37 @@ const features = [
   {
     icon: Package,
     title: "Gestão de Estoque",
-    description: "Controle completo de produtos, entradas e saídas com alertas de estoque baixo.",
+    description: "Controle produtos, entradas e saídas com alertas automáticos.",
     image: estoqueImg,
   },
   {
     icon: Wallet,
     title: "Entradas",
-    description: "Registre todas entradas e vendas e controle toda sua receita.",
+    description: "Registre vendas e receitas do seu negócio.",
     image: entradasImg,
   },
   {
     icon: Users,
     title: "Saídas",
-    description: "Controle todas as saídas do seu negócio como aluguel, vale de funcionário e muito mais.",
+    description: "Controle despesas como aluguel, salários e custos.",
     image: saidasImg,
   },
   {
     icon: Calculator,
-    title: "Calculadora de Custos",
-    description: "Calcule automaticamente o preço ideal dos seus produtos considerando todos os custos.",
+    title: "Calculadora de Preços",
+    description: "Calcule o preço ideal considerando todos os custos.",
     image: calculadoraImg,
   },
   {
     icon: BarChart3,
-    title: "Relatórios e Dashboard",
-    description: "Visualize métricas importantes: vendas, lucros, produtos mais vendidos e tendências.",
+    title: "Relatórios",
+    description: "Visualize vendas, lucros e tendências do seu negócio.",
     image: relatoriosImg,
   },
   {
     icon: Bot,
     title: "Mentor IA",
-    description: "Assistente inteligente que responde dúvidas sobre gestão do seu negócio.",
+    description: "Assistente inteligente para gestão e precificação.",
     image: mentorIAImg,
   },
 ];
@@ -69,18 +69,17 @@ const Features = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Funcionalidades</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-            Tudo que você precisa para
-            <span className="text-gradient block">gerir seu negócio</span>
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Funcionalidades</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 px-4">
+            Tudo para gerir
+            <span className="text-gradient block">seu negócio</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ferramentas completas para estoque, finanças e precificação inteligente, 
-            tudo em um só lugar.
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+            Estoque, finanças e precificação inteligente em um só lugar.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -88,7 +87,7 @@ const Features = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-6 rounded-2xl bg-gradient-card shadow-card hover:shadow-glow transition-all duration-300"
+              className="group p-4 sm:p-6 rounded-2xl bg-gradient-card shadow-card hover:shadow-glow transition-all duration-300"
             >
               {feature.image ? (
                 <div 

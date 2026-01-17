@@ -1,73 +1,78 @@
-# Welcome to your Lovable project
+# PrecifyApp - Landing Page
 
-## Project info
+Landing page oficial do PrecifyApp, sistema de gestão com mentor IA para precificação inteligente.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**URL**: https://github.com/wandersonmk/precify
 
-## How can I edit this code?
+## Sobre o Projeto
 
-There are several ways of editing your application.
+PrecifyApp é uma plataforma SaaS completa para gestão de negócios com foco em precificação inteligente usando IA. Esta landing page apresenta as funcionalidades do sistema e os planos disponíveis.
 
-**Use Lovable**
+## Tecnologias
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- shadcn/ui
 
-Changes made via Lovable will be committed automatically to this repo.
+## Como Executar
 
-**Use your preferred IDE**
+### Requisitos
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js 18+ & npm
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Instalação
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone o repositório
+git clone https://github.com/wandersonmk/precify.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navegue até o diretório
+cd precify
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Instale as dependências
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O projeto estará disponível em `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Estrutura do Projeto
 
-**Use GitHub Codespaces**
+```
+precify/
+├── src/
+│   ├── assets/          # Imagens e recursos estáticos
+│   ├── components/      # Componentes React
+│   │   ├── ui/         # Componentes base shadcn/ui
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Features.tsx
+│   │   ├── Pricing.tsx
+│   │   └── Footer.tsx
+│   ├── pages/          # Páginas da aplicação
+│   └── lib/            # Utilitários
+└── public/             # Arquivos públicos
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Scripts Disponíveis
 
-## What technologies are used for this project?
+- `npm run dev` - Inicia servidor de desenvolvimento
+- `npm run build` - Cria build de produção
+- `npm run preview` - Preview do build de produção
+- `npm run lint` - Executa o linter
 
-This project is built with:
+## Deploy
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+O projeto pode ser deployado em qualquer plataforma que suporte sites estáticos:
+- Vercel
+- Netlify
+- GitHub Pages
+- Cloudflare Pages
 
-## How can I deploy this project?
+## Licença
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2026 PrecifyApp - Todos os direitos reservados
